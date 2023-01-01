@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Form from './components/Form';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+        <h1 className="header-heading">CV Generator</h1>
       </header>
+      <section className="body">
+        <h2 className="body-heading">Tired of cluttered CVs that fail to stand out?</h2>
+        <h3 className="body-subheading">This app simplifies your job search by condensing your experience into a few easy-to-read bullet points!</h3>
+        <Form/>
+      </section>
     </div>
   );
 }
