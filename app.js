@@ -2,14 +2,14 @@ var createError = require('http-errors');
 var express = require('express');
 const port = process.env.PORT || 4000;
 
-var inputRouter = require('./routes/input');
+var apiRouter = require('./routes/api');
 
 var app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/', inputRouter);
+app.use('/api', apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

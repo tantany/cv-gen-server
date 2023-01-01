@@ -3,7 +3,7 @@ var router = express.Router();
 const axios = require('axios');
 
 /* GET input listing. */
-router.get('/api/input/:text', function (req, res, next) {
+router.get('/input/:text', function (req, res, next) {
   const API_KEY = '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'
   const prompt = req.params.text;
 
