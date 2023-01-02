@@ -3,19 +3,24 @@ import React, { useState } from 'react';
 function Form() {
     const [inputText, setInputText] = useState("");
     const [output, setOutput] = useState("");
+    const [cursor, setCursor] = useState('pointer');
 
     const URL = 'http://localhost:4000/api/input/'
 
     const getData = (text) => {
+        setCursor('wait');
         fetch(`${URL}${text}`)
             .then((response) => response.json())
-            .then((res) => setOutput(res.data));
+            .then((res) => {
+                setCursor('pointer');
+                setOutput(res.data);
+            });
     }
 
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        getData(inputText);
+        if(inputText) getData(inputText);
     }
 
     return (
@@ -27,7 +32,7 @@ function Form() {
                         onChange={(evt) => setInputText(evt.target.value)} >
                     </textarea>
                 </label>
-                <input className="button" type="submit" value="Snap it!" />
+                <input className="button" type="submit" value="Snap it!" style={{ cursor: cursor }} />
             </form>
             <p className="output">{output}</p>
         </>
