@@ -1,11 +1,13 @@
 var createError = require('http-errors');
 var express = require('express');
+var cors = require('cors');
 const port = process.env.PORT || 4000;
 
 var apiRouter = require('./routes/api');
 
 var app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
