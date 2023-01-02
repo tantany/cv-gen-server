@@ -24,7 +24,7 @@ const getData = (req, res) => {
             console.log(response.data)
             res.send({
                 message: "Data fetched succefully from openAI api",
-                data: response.data.choices[0].text
+                data: response.data.choices[0].text.split("\n").slice(2)
             })
         })
         .catch((error) => {
