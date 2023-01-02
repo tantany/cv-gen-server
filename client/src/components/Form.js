@@ -8,7 +8,8 @@ function Form() {
     
     const getData = async (text) => {
         fetch(`${URL}${text}`)
-            .then(response => console.log(response))
+        .then((response) => response.json())
+        .then((data) => console.log(data));
     }
 
     
