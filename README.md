@@ -16,6 +16,6 @@ There are two separated apps. The Client which serves the FrontEnd (using React)
 
 ## Check if they are connected
 1. With the two apps running, open your browser in http://localhost:3000/.
-2. If you see a webpage saying `Welcome to React`, it means the FrontEnd is working.
-3. If the same webpage has the phrase `API is working properly`, it means the API is working.
+2. If you see a webpage saying `SkillSnap`, it means the FrontEnd is working.
+3. Enter text in the input and click on the `Snap it` button. If you get result then all working fine.
 4. Enjoy!
