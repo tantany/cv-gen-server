@@ -45,8 +45,13 @@ code {
   font-family: 'Trebuchet MS', sans-serif;
 }
 
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .button {
-  width: 100%;
+  width: 49%;
   height: 50px;
   background-color: #7F2A3C;
   color: white;
@@ -56,8 +61,8 @@ code {
 }
 
 .button:hover {
-  /* cursor: pointer; */
   opacity: 0.9;
+  cursor: pointer;
 }
 
 .image {
@@ -71,4 +76,26 @@ code {
   font-size: 16px;
   font-family: 'Trebuchet MS', sans-serif;
   width: 685px;
+}
+
+.output {
+  margin: 0;
+  line-height: 24px;
+}
+
+.result {
+  margin-bottom: 10px;
+}
+
+.copy-button {
+  margin-top: 10px;
+  border: 1px solid #7F2A3C;
+  border-radius: 5px;
+  background-color: white;
+  height: 24px;
+}
+
+.copy-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
