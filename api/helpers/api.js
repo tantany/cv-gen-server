@@ -22,7 +22,10 @@ const getData = (req, res) => {
     })
         .then((response) => {
             console.log(response.data)
-            res.send(response.data.choices[0].text)
+            res.send({
+                message: "Data fetched succefully from openAI api",
+                data: response.data.choices[0].text
+            })
         })
         .catch((error) => {
             console.log(error)
